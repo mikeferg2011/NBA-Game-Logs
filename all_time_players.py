@@ -15,10 +15,6 @@ response = requests.get(url)
 response.raise_for_status()
 headers = response.json()['resultSets'][0]['headers']
 players = response.json()['resultSets'][0]['rowSet']
-print type(players)
-print type(headers)
-print headers[0]
-print players[0]
 players = pd.DataFrame(players, columns = headers)
 players.to_csv('C:/Users/Micha/Desktop/GitHub/NBA-Game-Logs/all_time_players.csv', index = False)
 print players.columns
