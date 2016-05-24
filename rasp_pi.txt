@@ -1,0 +1,5 @@
+To pi:
+ssh pi@10.0.0.31
+
+From pi:
+mysql -h 10.0.0.10 -u root -p
