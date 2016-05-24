@@ -1,0 +1,8 @@
+Database
+information_schema
+mysql
+nba
+performance_schema
+sakila
+sys
+world
