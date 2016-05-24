@@ -4,3 +4,5 @@ ssh pi@10.0.0.31
 From pi:
 #sudo apt-get install mysql-server
 mysql -h 10.0.0.10 -u root -p
+
+mysql -h 10.0.0.10 -u root -p < script.sql > out.txt
