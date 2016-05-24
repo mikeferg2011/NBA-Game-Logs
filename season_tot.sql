@@ -3,6 +3,7 @@ create table nba.season_totals as
 select SEASON_ID,
 	Player_ID,
 	count(Game_ID) as GP,
+	count(case when WL = 'W' then 1 end) as Wins,
 	sum(MINUTES) as MINUTES,
 	sum(FGM) as FGM,
 	sum(FGA) as FGA,
