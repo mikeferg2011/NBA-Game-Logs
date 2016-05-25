@@ -1,4 +1,5 @@
 --consider putting names in the season table and adjusted game_logs to improve effeciency
+--select concat(right('22002',4), '-', lpad(cast(right('22002',2) as unsigned)+1,2,0));
 create table nba.season_totals as
 select SEASON_ID,
 	Player_ID,
