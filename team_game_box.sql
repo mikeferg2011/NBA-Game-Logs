@@ -6,8 +6,8 @@ select concat(right(season_id,4),'-',right(right(season_id,4)+1,2)) as Season
 	, GAME_ID
 	, GAME_DATE
 	, left(matchup,3) as Team
-  , right(matchup,3) as Opp
-  , case when matchup like '%vs%' then 'H' when matchup like '%@%' then 'A' else 'Other' end as Home_Away
+	, right(matchup,3) as Opp
+	, case when matchup like '%vs%' then 'H' when matchup like '%@%' then 'A' else 'Other' end as Home_Away
 	, WL
 	, sum(FGM) as FGM 
 	, sum(FGA) as FGA
@@ -15,7 +15,7 @@ select concat(right(season_id,4),'-',right(right(season_id,4)+1,2)) as Season
 	, sum(FG3M) as FG3M
 	, sum(FG3A) as FG3A
 	, sum(FG3M)/sum(FG3A) as FG3_PCT
- 	, sum(FTM) as FTM
+	, sum(FTM) as FTM
 	, sum(FTA) as FTA
 	, sum(FTM)/sum(FTA) as FT_PCT
 	, sum(OREB) as OREB
